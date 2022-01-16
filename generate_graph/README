@@ -1,0 +1,9 @@
+The script in this folder generates the trimming graph of quadratic APN functions. In order to run it, you first need an up-to-date version of sboxU (i.e. with a commit at least as recent as c712ee837d5d92f039609ff4eb5ed13167c6cef8). You need to place the sboxU folder in the current directory (or a link to it).
+
+You also need to have the `dot` tool, which is contained in the `dot` package in the usual ubuntu repositories (it should work on windows but we could not test it).
+
+Then, to generate the trimming graph of quadratic APN functions, simply run the following commands:
+
+    sage cczTrunc.py > graph.gv
+    dot graph.gv -Tpng > picture.png
+
