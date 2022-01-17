@@ -9,3 +9,7 @@ Then, to generate the trimming graph of quadratic APN functions, simply run the 
     sage cczTrunc.py > graph.gv
     dot graph.gv -Tpng > picture.png
 
+
+/!\ Adding new 8-bit functions /!\
+
+If you want to run this code yourself on a bigger set of 8-bit S-box, be careful! The APN trims are sorted into distinct CCZ equivalence classes using the differential and linear properties of their ortho-derivatives. However, these quantities are the same for x^3 and x^9 when n=7, meaning that APN trims in the CCZ-class of either of these mappings we be considered as belonging to the same class. It is not a problem for us since neither mapping in the trimmings of a known 8-bit function, but caution may still be needed.
